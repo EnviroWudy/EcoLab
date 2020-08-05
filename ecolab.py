@@ -107,11 +107,11 @@ def send_cmd(s):
 def try_connection(ip, port):
     global sock
     try:
-        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # (EN) Attempting Connection to Server
         server_address = (ip, int(port))
         sock.connect(server_address)
     except socket.error:
-        print "[ERROR] Could not establish a connection to the server"
+        print "[ERROR] Could not establish a connection to the server" 
 
 
 ###### ARGS
